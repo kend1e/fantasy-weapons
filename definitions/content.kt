@@ -92,4 +92,5 @@ val content = contentCatalog(
     weapon("weapon_silver_knight_sword", template = "minecraft:snowball")
     weapon("weapon_ashen_judgment_battleaxe", template = "minecraft:charcoal")
     weapon("weapon_frostbite_axe", template = "minecraft:packed_ice", largeModel = LargeModel.DOUBLE)
+    weapon("weapon_dawncrest_glaive", template = "minecraft:sunflower")
 }

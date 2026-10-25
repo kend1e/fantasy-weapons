@@ -81,6 +81,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Silver Knight Sword")
         item("weapon_ashen_judgment_battleaxe", "Ashen Judgment Battleaxe")
         item("weapon_frostbite_axe", "Frostbite Axe")
+        item("weapon_dawncrest_glaive", "Dawncrest Glaive")
     }
     language("ru_ru") {
         tabTitle("Fantasy Weapons")
@@ -160,6 +161,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Меч Серебряного Рыцаря")
         item("weapon_ashen_judgment_battleaxe", "Секира Пепельного Приговора")
         item("weapon_frostbite_axe", "Топор Ледяного Укуса")
+        item("weapon_dawncrest_glaive", "Глефа Герба Рассвета")
     }
     language("uk_ua") {
         tabTitle("Fantasy Weapons")
@@ -239,6 +241,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Меч Срібного Лицаря")
         item("weapon_ashen_judgment_battleaxe", "Сокира Попелястого Вироку")
         item("weapon_frostbite_axe", "Сокира Крижаного Укусу")
+        item("weapon_dawncrest_glaive", "Глефа Герба Світанку")
     }
 
     language("es_es") {
@@ -319,6 +322,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Espada del Caballero Plateado")
         item("weapon_ashen_judgment_battleaxe", "Hacha de Batalla del Juicio de Ceniza")
         item("weapon_frostbite_axe", "Hacha de la Mordedura Helada")
+        item("weapon_dawncrest_glaive", "Guja del Emblema del Alba")
     }
 
     language("pt_br") {
@@ -399,6 +403,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Espada do Cavaleiro Prateado")
         item("weapon_ashen_judgment_battleaxe", "Machado de Batalha do Julgamento das Cinzas")
         item("weapon_frostbite_axe", "Machado da Mordida Gélida")
+        item("weapon_dawncrest_glaive", "Glaive do Brasão da Aurora")
     }
 
     language("de_de") {
@@ -479,6 +484,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Schwert des Silberritters")
         item("weapon_ashen_judgment_battleaxe", "Streitaxt des Aschenurteils")
         item("weapon_frostbite_axe", "Frostbissaxt")
+        item("weapon_dawncrest_glaive", "Gleve des Morgenwappens")
     }
 
     language("fr_fr") {
@@ -559,6 +565,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Épée du Chevalier d'Argent")
         item("weapon_ashen_judgment_battleaxe", "Hache de Guerre du Jugement des Cendres")
         item("weapon_frostbite_axe", "Hache de la Morsure du Gel")
+        item("weapon_dawncrest_glaive", "Vouge de l’Emblème de l’Aube")
     }
 
     language("pl_pl") {
@@ -639,6 +646,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Miecz Srebrnego Rycerza")
         item("weapon_ashen_judgment_battleaxe", "Topór Bojowy Popielnego Wyroku")
         item("weapon_frostbite_axe", "Topór Mroźnego Ukąszenia")
+        item("weapon_dawncrest_glaive", "Glewia Herbu Świtu")
     }
 
     language("ja_jp") {
@@ -719,6 +727,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "銀騎士の剣")
         item("weapon_ashen_judgment_battleaxe", "灰の審判の戦斧")
         item("weapon_frostbite_axe", "凍てつく牙の斧")
+        item("weapon_dawncrest_glaive", "暁の紋章の薙刀")
     }
 
     language("zh_cn") {
@@ -799,6 +808,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "银骑士长剑")
         item("weapon_ashen_judgment_battleaxe", "灰烬审判战斧")
         item("weapon_frostbite_axe", "寒霜之噬战斧")
+        item("weapon_dawncrest_glaive", "曙光纹章关刀")
     }
 
     language("tr_tr") {
@@ -879,6 +889,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "Gümüş Şövalye Kılıcı")
         item("weapon_ashen_judgment_battleaxe", "Kül Hükmü Savaş Baltası")
         item("weapon_frostbite_axe", "Ayaz Isırığı Baltası")
+        item("weapon_dawncrest_glaive", "Şafak Arması Glevi")
     }
 
     language("ko_kr") {
@@ -959,5 +970,6 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
         item("weapon_silver_knight_sword", "은빛 기사의 검")
         item("weapon_ashen_judgment_battleaxe", "잿빛 심판의 전투도끼")
         item("weapon_frostbite_axe", "서리 이빨 도끼")
+        item("weapon_dawncrest_glaive", "새벽 문장의 글레이브")
     }
 }
