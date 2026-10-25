@@ -6,6 +6,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("en_us") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Blazing Stone")
+        entry("item.${mod.id}.blazing_stone.tooltip", "A fragment of an undying flame. Awakens the power of ancient weapons.")
         item("weapon_fates_beacon", "Fate's Beacon")
         item("weapon_eclipse_soldier_spear", "Eclipse Soldier Spear")
         item("weapon_hero_claymore", "Hero Claymore")
@@ -86,6 +87,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("ru_ru") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Пылающий камень")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Осколок неугасимого пламени. Пробуждает силу древнего оружия.")
         item("weapon_fates_beacon", "Светоч Судьбы")
         item("weapon_eclipse_soldier_spear", "Копьё Солдата Затмения")
         item("weapon_hero_claymore", "Клеймор Героя")
@@ -166,6 +168,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("uk_ua") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Палаючий камінь")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Уламок незгасного полум’я. Пробуджує силу стародавньої зброї.")
         item("weapon_fates_beacon", "Світоч Долі")
         item("weapon_eclipse_soldier_spear", "Спис Солдата Затемнення")
         item("weapon_hero_claymore", "Клеймор Героя")
@@ -247,6 +250,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("es_es") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Piedra Ardiente")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Un fragmento de una llama eterna. Despierta el poder de las armas antiguas.")
         item("weapon_fates_beacon", "Faro del Destino")
         item("weapon_eclipse_soldier_spear", "Lanza del Soldado del Eclipse")
         item("weapon_hero_claymore", "Claymore del Héroe")
@@ -328,6 +332,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("pt_br") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Pedra Flamejante")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Um fragmento de uma chama eterna. Desperta o poder de armas antigas.")
         item("weapon_fates_beacon", "Farol do Destino")
         item("weapon_eclipse_soldier_spear", "Lança do Soldado do Eclipse")
         item("weapon_hero_claymore", "Claymore do Herói")
@@ -409,6 +414,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("de_de") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Flammenstein")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Ein Splitter einer unauslöschlichen Flamme. Erweckt die Macht uralter Waffen.")
         item("weapon_fates_beacon", "Leuchtfeuer des Schicksals")
         item("weapon_eclipse_soldier_spear", "Speer des Eklipsensoldaten")
         item("weapon_hero_claymore", "Claymore des Helden")
@@ -490,6 +496,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("fr_fr") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Pierre Ardente")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Un fragment de flamme éternelle. Éveille le pouvoir des armes anciennes.")
         item("weapon_fates_beacon", "Phare du Destin")
         item("weapon_eclipse_soldier_spear", "Lance du Soldat de l'Éclipse")
         item("weapon_hero_claymore", "Claymore du Héros")
@@ -571,6 +578,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("pl_pl") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Płonący Kamień")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Odłamek niegasnącego płomienia. Budzi moc pradawnej broni.")
         item("weapon_fates_beacon", "Latarnia Przeznaczenia")
         item("weapon_eclipse_soldier_spear", "Włócznia Żołnierza Zaćmienia")
         item("weapon_hero_claymore", "Claymore Bohatera")
@@ -652,6 +660,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("ja_jp") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "燃え盛る石")
+        entry("item.${mod.id}.blazing_stone.tooltip", "消えることのない炎の欠片。古の武器に眠る力を呼び覚ます。")
         item("weapon_fates_beacon", "運命の灯火")
         item("weapon_eclipse_soldier_spear", "覆面兵士の槍")
         item("weapon_hero_claymore", "英雄のクレイモア")
@@ -733,6 +742,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("zh_cn") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "炽焰石")
+        entry("item.${mod.id}.blazing_stone.tooltip", "永不熄灭的火焰碎片。唤醒古老武器的力量。")
         item("weapon_fates_beacon", "命运灯塔")
         item("weapon_eclipse_soldier_spear", "日蚀战士长矛")
         item("weapon_hero_claymore", "英雄大剑")
@@ -814,6 +824,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("tr_tr") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "Alevli Taş")
+        entry("item.${mod.id}.blazing_stone.tooltip", "Sönmeyen bir alevin parçası. Kadim silahların gücünü uyandırır.")
         item("weapon_fates_beacon", "Kader Feneri")
         item("weapon_eclipse_soldier_spear", "Tutulma Askeri Mızrağı")
         item("weapon_hero_claymore", "Kahraman Claymore'u")
@@ -895,6 +906,7 @@ val languages = translations(namespace = mod.id, tab = content.tab) {
     language("ko_kr") {
         tabTitle("Fantasy Weapons")
         item("blazing_stone", "타오르는 돌")
+        entry("item.${mod.id}.blazing_stone.tooltip", "꺼지지 않는 불꽃의 파편. 고대 무기의 힘을 깨운다.")
         item("weapon_fates_beacon", "운명의 등불")
         item("weapon_eclipse_soldier_spear", "일식 병사의 창")
         item("weapon_hero_claymore", "영웅의 클레이모어")
