@@ -19,8 +19,7 @@ final class AttributeAccess {
         stack.set(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY);
         stack.setDamageValue(7);
         StackAccess.mark(stack);
-        var entity = net.minecraft.world.entity.EntityType.ARMOR_STAND.create(h.getLevel(), net.minecraft.world.entity.EntitySpawnReason.COMMAND);
-        AttributeAccess.check(h, entity != null, "Missing attribute fixture entity");
+        var entity = player(h);
         item.inventoryTick(stack, h.getLevel(), entity, null);
         AttributeAccess.check(h, stack.getDamageValue() == 7 && StackAccess.marked(stack), id + " refresh lost data");
         var entries = stack.getOrDefault(DataComponents.ATTRIBUTE_MODIFIERS, ItemAttributeModifiers.EMPTY).modifiers();

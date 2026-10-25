@@ -16,7 +16,7 @@ final class AttributeTests {
         var position = h.absolutePos(new net.minecraft.core.BlockPos(1, 2, 1));
         player.setPos(position.getX() + 0.5, position.getY(), position.getZ() + 0.5);
         player.setNoGravity(true);
-        player.setInvulnerable(true);
+        player.getAbilities().invulnerable = true;
         double baseDamage = player.getAttributeValue(Attributes.ATTACK_DAMAGE);
         double baseSpeed = player.getAttributeValue(Attributes.ATTACK_SPEED);
         try {
