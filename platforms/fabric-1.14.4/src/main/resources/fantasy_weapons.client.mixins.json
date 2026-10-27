@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.kenddie.fantasyweapons.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "ItemRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

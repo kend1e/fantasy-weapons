@@ -2,7 +2,7 @@ package net.kenddie.fantasyweapons.test;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.Items;
 import net.kenddie.fantasyweapons.GameVersion;
 import net.minecraft.world.item.Item;
 import java.io.InputStreamReader;
@@ -12,8 +12,9 @@ final class TestSupport {
     static final JsonObject EXPECTED = load();
     static Item item(String id) {
         var key = GameVersion.id(id.contains(":") ? id : "fantasy_weapons:" + id);
-        if (!BuiltInRegistries.ITEM.containsKey(key)) throw new IllegalStateException("Missing item: " + key);
-        return net.kenddie.fantasyweapons.item.FWItems.get(id);
+        var item = net.kenddie.fantasyweapons.item.FWItems.get(id);
+        if (item == null || item == Items.AIR) throw new IllegalStateException("Missing item: " + key);
+        return item;
     }
     static void near(double actual, double expected, String message) {
         if (!Double.isFinite(actual) || Math.abs(actual - expected) > 0.00001)

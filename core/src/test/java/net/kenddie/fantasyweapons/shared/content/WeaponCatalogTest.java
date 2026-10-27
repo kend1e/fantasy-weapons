@@ -1,12 +1,12 @@
 package net.kenddie.fantasyweapons.shared.content;
 
 import org.junit.Test;
-import java.util.List;
+import java.util.Collections;
 import static org.junit.Assert.*;
 
 public class WeaponCatalogTest {
     @Test public void loadsCatalogWithOptionalLargeModels() {
-        var catalog = WeaponCatalog.INSTANCE;
+        WeaponCatalog catalog = WeaponCatalog.INSTANCE;
         assertTrue(catalog.materials().contains("blazing_stone"));
         assertTrue(catalog.weapons().stream().anyMatch(weapon -> weapon.id().equals("weapon_savage_sword") && weapon.largeModel()));
         assertTrue(catalog.weapons().stream().anyMatch(weapon -> weapon.id().equals("weapon_wakizashi") && !weapon.largeModel()));
@@ -14,8 +14,8 @@ public class WeaponCatalogTest {
     }
 
     @Test public void rejectsDuplicateIdsAndUnknownIcon() {
-        assertThrows(IllegalArgumentException.class, () -> new WeaponCatalog("a", List.of("a"), List.of(new WeaponCatalog.Weapon("a", true))));
-        assertThrows(IllegalArgumentException.class, () -> new WeaponCatalog("missing", List.of("a"), List.of()));
+        assertThrows(IllegalArgumentException.class, () -> new WeaponCatalog("a", Collections.singletonList("a"), Collections.singletonList(new WeaponCatalog.Weapon("a", true))));
+        assertThrows(IllegalArgumentException.class, () -> new WeaponCatalog("missing", Collections.singletonList("a"), Collections.emptyList()));
     }
 
     @Test public void exposesImmutableCatalogData() {

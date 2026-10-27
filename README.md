@@ -4,15 +4,15 @@ A Minecraft mod with fantasy weapons for Forge, NeoForge, and Fabric. A companio
 
 Downloads: [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fantasy-weapons-medieval-series) · [Modrinth](https://modrinth.com/mod/fantasy_weapons).
 
-Fabric requires [Fabric API](https://modrinth.com/mod/fabric-api) and [Cloth Config](https://modrinth.com/mod/cloth-config).
+Fabric requires [Fabric API](https://modrinth.com/mod/fabric-api) and [Cloth Config](https://modrinth.com/mod/cloth-config). AutoConfig1u is bundled on 1.14.4 and 1.15.2.
 
 | Loader   | Minecraft                                                    |
 |----------|--------------------------------------------------------------|
-| Forge    | 1.19.4, 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3 |
+| Forge    | 1.12.2, 1.14.4, 1.15.2, 1.16.5, 1.18.2, 1.19.2, 1.19.3, 1.19.4, 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3 |
 | NeoForge | 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3                 |
-| Fabric   | 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3         |
+| Fabric   | 1.14.4, 1.15.2, 1.16.5, 1.18.2, 1.19.2, 1.19.3, 1.19.4, 1.20.1, 1.21.1, 1.21.10, 1.21.11, 26.1.2, 26.2, 26.3 |
 
-Build with JDK 25 and the shared [fantasy-build](https://github.com/kend1e/fantasy-build) repository checked out at `../fantasy-build`. Toolchains select Java 17, 21, or 25 for each target.
+Build with JDK 25 and the shared [fantasy-build](https://github.com/kend1e/fantasy-build) repository checked out at `../fantasy-build`. Toolchains select Java 8, 17, 21, or 25 for each target.
 
 ```bash
 # Build all platforms or one platform
@@ -40,7 +40,8 @@ Tests run unit checks and Minecraft server scenarios. Run both profiles before a
 The default profile checks default settings; `configured` checks modified settings.
 Success means `BUILD SUCCESSFUL` and `PASS` for every selected platform in the final summary.
 Server reports are in `platforms/<target>/build/reports/test/<profile>/results.xml`.
-Client rendering still needs a manual check.
+Client rendering still needs a manual check. Minecraft 1.12.2–1.16.5 platforms have no GameTest runner; verify it with `runClient` and `runServer`.
+Forge 1.12.2 uses `config/fantasy_weapons.cfg`; damage and attack speed are synchronized from the server on login.
 
 - [definitions/content.kt](definitions/content.kt) — weapons, model sizes, materials, and recipes.
 - [definitions/translations.kt](definitions/translations.kt) — translations.

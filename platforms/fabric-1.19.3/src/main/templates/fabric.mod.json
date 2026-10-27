@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "entrypoints": {
+    "main": [
+      "net.kenddie.fantasyweapons.FantasyWeapons"
+    ],
+    "client": [
+      "net.kenddie.fantasyweapons.FantasyWeaponsClient"
+    ]
+  },
+  "mixins": [
+    "fantasy_weapons.client.mixins.json"
+  ]
+}

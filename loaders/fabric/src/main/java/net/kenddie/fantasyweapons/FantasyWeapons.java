@@ -12,7 +12,7 @@ public class FantasyWeapons implements ModInitializer {
     @Override
     public void onInitialize() {
         FWConfig.register();
-        FWItemRegistration.register();
         FWCreativeModTabs.register();
+        FWItemRegistration.register();
     }
 }

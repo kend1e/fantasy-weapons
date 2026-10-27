@@ -9,6 +9,8 @@ import fantasy.weapons.definitions.content
 import fantasy.weapons.definitions.languages
 import fantasy.weapons.definitions.mod
 import fantasy.weapons.definitions.targets
+import fantasy.weapons.definitions.recipeItemsByMinecraft
+import fantasy.gradle.minecraft.MinecraftVersions
 import fantasy.gradle.content.weapons.contentResources
 import fantasy.gradle.ExportRelease
 import org.gradle.api.Plugin
@@ -23,18 +25,27 @@ class WeaponsPlatformPlugin : Plugin<Project> {
         val target = targets.single { it.path == path }
         configureMod(mod, target)
         pluginManager.apply("fantasy.build.${target.loader.id}")
-        configureModSources()
+        configureModSources(if (target.minecraft == "1.12.2" ||
+            target.loader == Loader.FABRIC && target.minecraft in setOf("1.14.4", "1.15.2")) emptyList() else listOf(
+            "minecraft/${target.minecraft}/src/main/java",
+            "loaders/${target.loader.id}/src/main/java",
+        ))
         configureModResources()
         extensions.configure<ResourcesExtension> {
             generate("generateContentResources") {
-                contents.set(contentResources(content, languages, target.minecraft))
+                contents.set(contentResources(content, languages, target.minecraft,
+                    recipeItemsByMinecraft[target.minecraft].orEmpty()))
                 outputDirectory.set(layout.buildDirectory.dir("generated/resources/content"))
             }
         }
         repositories.mavenCentral()
         val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
         dependencies.add("testImplementation", libs.findLibrary("junit").get())
-        configureWeaponsTests()
+        if (MinecraftVersions[target.minecraft].loader(target.loader).tests != null) {
+            configureWeaponsTests()
+        } else tasks.named("test") {
+            description = "No native GameTest runner is available for ${target.name}; verify this platform in Minecraft."
+        }
         if (target.loader == Loader.FORGE) extensions.configure<PublishingExtension> {
             val release = tasks.named<ExportRelease>("exportRelease")
             publications.register<MavenPublication>("mavenJava") {

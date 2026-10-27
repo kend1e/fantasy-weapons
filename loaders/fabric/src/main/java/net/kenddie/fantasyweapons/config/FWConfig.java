@@ -7,13 +7,14 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 
 import java.util.Map;
+import java.util.Collections;
 import java.util.TreeMap;
 
 import net.kenddie.fantasyweapons.shared.content.WeaponCatalog;
 
 @Config(name = ModConstants.MOD_ID)
 public final class FWConfig implements ConfigData {
-    private static Map<String, WeaponSettings> active = Map.of();
+    private static Map<String, WeaponSettings> active = Collections.emptyMap();
     public Map<String, WeaponConfig> weapons = new TreeMap<>();
 
     public FWConfig() {
@@ -21,10 +22,10 @@ public final class FWConfig implements ConfigData {
     }
 
     public static void register() {
-        var config = AutoConfig.register(FWConfig.class, GsonConfigSerializer::new).getConfig();
-        var settings = new TreeMap<String, WeaponSettings>();
+        FWConfig config = AutoConfig.register(FWConfig.class, GsonConfigSerializer::new).getConfig();
+        Map<String, WeaponSettings> settings = new TreeMap<String, WeaponSettings>();
         config.weapons.forEach((id, entry) -> settings.put(id, new WeaponSettings(entry.damage, entry.speed)));
-        active = Map.copyOf(settings);
+        active = Collections.unmodifiableMap(settings);
     }
 
     public static WeaponSettings weapon(String id) {

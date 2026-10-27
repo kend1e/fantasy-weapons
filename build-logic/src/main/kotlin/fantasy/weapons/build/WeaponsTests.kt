@@ -15,6 +15,11 @@ fun Project.configureWeaponsTests() {
     val version = MinecraftVersions[target.minecraft]
     val profile = providers.gradleProperty("testProfile").getOrElse("defaults")
     require(profile in setOf("defaults", "configured")) { "Unknown test profile: $profile" }
+    val replacements = recipeItemsByMinecraft[target.minecraft].orEmpty()
+    val testContent = content.copy(weapons = content.weapons.map { weapon ->
+        weapon.copy(template = replacements[weapon.template]?.id ?: weapon.template,
+            base = replacements[weapon.base]?.id ?: weapon.base)
+    })
     val changed = content.weapons.first().id
     val damage = 17.0
     val speed = -1.25
@@ -40,7 +45,7 @@ fun Project.configureWeaponsTests() {
         resources = mapOf("weapon_test_expectations.json" to json(mapOf(
             "changed" to if (profile == "configured") changed else "", "damage" to damage, "speed" to speed,
             "preservesUpgradeData" to (version.resources.recipes.upgrade is fantasy.gradle.minecraft.UpgradeRecipeMethod.SmithingTransform),
-            "addition" to content.addition, "weapons" to content.weapons, "materials" to content.materials))),
+            "addition" to content.addition, "weapons" to testContent.weapons, "materials" to content.materials))),
         configFiles = configDirectories.associate { "$it/$configName" to config },
         configured = profile == "configured",
         modId = mod.id,
